@@ -1,0 +1,273 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6;
+    background: #181717;; 
+}
+
+.fillSB {
+    color: yellow;
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo para los enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* Estilo del encabezado y navegación */
+header {
+    background: #e74c3c; /* Color de fondo del encabezado */
+    color: #ecf0f1; /* Color del texto en el encabezado */
+    padding: 10px 0;
+    margin: 10px;
+    position: sticky; /* Fija el encabezado en la parte superior de la página */
+    top: 0; /* Posición en la parte superior */
+    z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Utiliza un contenedor flexible para los elementos de la lista */
+    justify-content: center; /* Centra los elementos de la lista horizontalmente */
+    padding: 0; /* Elimina el espaciado interno de la lista */
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaciado entre los elementos de la lista */
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Color del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-weight: bold; /* Estilo de fuente en negrita */
+    transition: color 0.3s ease, background 0.3s ease; /* Transición suave para el color y fondo */
+    padding: 5px 10px; /* Espaciado interno del enlace */
+    border-radius: 5px; /* Bordes redondeados del enlace */
+}
+
+nav ul li a:hover {
+    color: #fff; /* Color del texto del enlace al pasar el ratón */
+    background: #e74c3c; /* Color de fondo del enlace al pasar el ratón */
+}
+
+/* Estilo de los encabezados secundarios */
+h2 {
+    font-size: 2em; /* Tamaño de fuente para los encabezados secundarios */
+    color: #333; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior del encabezado */
+    margin: 25px;
+}
+
+/* Estilo de los párrafos */
+p {
+    font-size: 1.1em; /* Tamaño de fuente para los párrafos */
+    margin-bottom: 20px; /* Espaciado inferior del párrafo */
+}
+
+/* Estilo de las listas no ordenadas */
+ul {
+    list-style: square inside; /* Estilo de los puntos de la lista */
+}
+
+/* Estilo de los elementos de lista */
+li {
+    font-size: 1.2em; /* Tamaño de fuente para los elementos de lista */
+}
+
+/* Estilo de la sección principal de héroe */
+.hero {
+    background-image: url('https://img.freepik.com/free-photo/people-working-out-indoors-together-with-dumbbells_23-2149175342.jpg?t=st=1725125574~exp=1725129174~hmac=9585bc35ad03e0cd804c1b9e738ee2316e1d295118aa8b0005b1de4a112f5b22&w=826'); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el área del contenedor */
+    color: #fff; /* Color del texto */
+    overflow: hidden; /* Oculta cualquier contenido que desborde el contenedor */
+    padding: 100px 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto horizontalmente */
+    position: relative; /* Posicionamiento relativo para los elementos hijos */
+    border-radius: 20px; /* Bordes redondeados */
+    margin-bottom: 5px; /* Espaciado inferior */
+}
+
+.hero::before {
+    content: ''; /* Crea un pseudo-elemento vacío */
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor relativo */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en el lado izquierdo */
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Alto completo del contenedor */
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad del 50% */
+    z-index: 1; /* Asegura que el pseudo-elemento esté por encima del fondo, pero debajo del contenido */
+}
+
+.hero h1 {
+    font-size: 3em; /* Tamaño de fuente para el encabezado principal */
+    margin-bottom: 20px; /* Espaciado inferior */
+    position: relative; /* Posicionamiento relativo para el z-index */
+    z-index: 2; /* Asegura que el texto esté por encima del pseudo-elemento */
+}
+
+.hero p {
+    font-size: 1.2em; /* Tamaño de fuente para los párrafos */
+    margin-bottom: 30px; /* Espaciado inferior */
+    position: relative; /* Posicionamiento relativo para el z-index */
+    z-index: 2; /* Asegura que el texto esté por encima del pseudo-elemento */
+}
+
+/* Estilo para los botones de llamada a la acción */
+.cta-button {
+    background: #e74c3c; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 15px 30px; /* Espaciado interno del botón */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    font-size: 1.2em; /* Tamaño de fuente del botón */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transiciones suaves para el fondo y la transformación */
+}
+
+.cta-button:hover {
+    background: #c03926; /* Color de fondo del botón al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón al pasar el ratón */
+}
+
+/* Estilo de las secciones */
+section {
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilo de las características y precios */
+.features, .pricing {
+    display: flex; /* Utiliza un contenedor flexible */
+    justify-content: space-around; /* Distribuye el espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+    margin: 0 -10px; /* Elimina el espaciado de los lados */
+}
+
+.feature, .plan {
+    flex: 1; /* Cada elemento ocupa el mismo espacio disponible */
+    margin: 10px; /* Espaciado entre los elementos */
+    padding: 20px; /* Espaciado interno */
+    background-color: #2c2c2c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+    border-radius: 30px;
+    color: #ccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para la transformación y la sombra */
+}
+
+#productos {
+    border-radius: 5px; /* Bordes redondeados del contenedor de productos */
+
+    border-radius:20px;
+    margin:25px;
+}
+#productos h2 {
+    color: #FFA500; /* Color naranja brillante */
+    font-size: 2rem; /* Tamaño de fuente relativo */
+    font-weight: bold; /* Negrita para destacar el texto */
+    text-transform: uppercase; /* Transformar texto a mayúsculas */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)); /* Gradiente oscuro para contraste */
+    padding: 10px 20px; /* Espaciado interno para mejor legibilidad */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin: 20px 0; /* Espaciado externo superior e inferior */
+    text-align: center; /* Alineación central del texto */
+    display: inline-block; /* Asegura que el padding y el fondo se ajusten al tamaño del texto */
+}
+
+#buton{
+    margin: 30px;
+}
+
+.pre{
+    margin: 0;
+
+}
+
+
+#precios{
+    border-radius:20px;
+    margin:20px;
+}
+#precios h2{
+    color: #FFA500; /* Color naranja brillante */
+    font-size: 2rem; /* Tamaño de fuente relativo */
+    font-weight: bold; /* Negrita para destacar el texto */
+    text-transform: uppercase; /* Transformar texto a mayúsculas */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)); /* Gradiente oscuro para contraste */
+    padding: 10px 20px; /* Espaciado interno para mejor legibilidad */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin: 20px 0; /* Espaciado externo superior e inferior */
+    text-align: center; /* Alineación central del texto */
+    display: inline-block;
+}
+.feature {
+    border: 2px solid black; /* Borde negro alrededor de las características */
+}
+
+.feature:hover, .plan:hover {
+    transform: translateY(-10px); /* Mueve el elemento hacia arriba al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el ratón */
+}
+
+/* Estilo de los encabezados dentro de las características y planes */
+.feature h3, .plan h3 {
+    color: #e74c3c; /* Color del texto del encabezado */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+/* Estilo de los formularios */
+form {
+    max-width: 350px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    background: #fff8; /* Color de fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del formulario */
+}
+
+#contacto h2{
+  color: #FFA500;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  padding: 5px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  text-align: center;
+  display: inline-block;
+}
+
+
+/* Estilo de las etiquetas de formulario */
+input{
+    padding: 8px;
+    margin: 10px;
+    background: #fff9;
+    border-radius: 7px;
+    border:none;
+
+}
+input:hover{
+    box-shadow: 0 0 5px 0 black;
+}
+button{
+    border:none;
+    padding: 8px;
+    border-radius:8px;
+    font-size: 13px;
+}
+footer{
+    text-align:center;
+
+}

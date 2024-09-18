@@ -1,0 +1,173 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6;
+    background: #181717; 
+}
+
+header {
+    background: #e74c3c;
+    color: #ecf0f1;
+    padding: 10px 0;
+    margin: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.hero {
+    background: url('https://img.freepik.com/free-photo/people-working-out-indoors-together-with-dumbbells_23-2149175342.jpg?t=st=1725125574~exp=1725129174~hmac=9585bc35ad03e0cd804c1b9e738ee2316e1d295118aa8b0005b1de4a112f5b22&w=826') no-repeat center center/cover;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-button {
+    background: #e74c3c;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#suplementos {
+    background: #181717;
+}
+
+#suplementos h2 {
+    color: #FFA500;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    text-align: center;
+    display: inline-block;
+}
+
+#suplementos p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.lista_productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 50px 0 30px;
+    background-color: #181717;
+}
+
+.product {
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background: #2c2c2c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: solid 2px black;
+    color: #ccc;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.5em;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 15px 0;
+}
+
